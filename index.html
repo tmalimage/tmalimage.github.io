@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utility tools</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      width: 100%;
+      max-width: 640px;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: 0 0 3rem;
+      letter-spacing: -0.02em;
+    }
+
+    .projects {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .project {
+      background: var(--card);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: left;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      display: block;
+    }
+
+    .project:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .project-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 0.25rem;
+      color: var(--accent);
+    }
+
+    .project-desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Utility tools</h1>
+
+    <div class="projects">
+      <a class="project" href="https://wordcounter-weld.vercel.app/" target="_blank" rel="noopener noreferrer">
+        <p class="project-name">Word Counter &rarr;</p>
+        <p class="project-desc">A lightweight tool to count words, characters, and more.</p>
+      </a>
+    </div>
+
+    <footer>Hosted on GitHub Pages</footer>
+  </main>
+</body>
+</html>
